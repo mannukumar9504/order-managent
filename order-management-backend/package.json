@@ -1,0 +1,53 @@
+{
+  "name": "order-management-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run db:migrate && nodemon index.js",
+    "gen:ssl": "node ssl-service.js",
+    "db:migrate": "./node_modules/.bin/sequelize db:migrate && sequelize db:seed:all",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "npm run db:migrate && nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ritesh-nahar/order-management-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ritesh-nahar/order-management-backend/issues"
+  },
+  "homepage": "https://github.com/ritesh-nahar/order-management-backend#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-sanitizer": "^1.0.6",
+    "express-validator": "^6.14.1",
+    "fast-csv": "^4.3.6",
+    "fs": "0.0.1-security",
+    "joi": "^17.6.0",
+    "joi-objectid": "^4.0.2",
+    "jsonwebtoken": "^8.5.1",
+    "log4js": "^6.5.2",
+    "mysql2": "^2.3.3",
+    "node": "^17.7.2",
+    "path": "^0.12.7",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "selfsigned": "^2.0.1",
+    "sequelize": "^6.20.1",
+    "sequelize-cli": "^6.4.1",
+    "winston": "^3.7.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.17.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "nodemon": "^2.0.18"
+  }
+}
